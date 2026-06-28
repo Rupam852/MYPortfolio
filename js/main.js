@@ -321,24 +321,29 @@ function initContactForm() {
     setTimeout(() => {
       status.textContent = 'Routing through secure CDN gateways... 🌐';
       
-      // Determine endpoint dynamically (local Express vs Render backend)
-      const endpoint = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:5000/api/contact'
-        : 'https://rupam-portfolio-api.onrender.com/api/contact';
-
-      fetch(endpoint, {
+      // Post to EmailJS API directly
+      fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message
+          service_id: 'service_to8h7pl',
+          template_id: 'template_bt5v2m9',
+          user_id: 'oA9hS-0oSa1wQ52S4',
+          template_params: {
+            from_name: name,
+            from_email: email,
+            message: message
+          }
         })
       })
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('EmailJS transmission failed');
+        }
+        return response.text();
+      })
       .then(data => {
         status.style.color = '#10b981'; // Green success
         status.textContent = 'Packet securely delivered. Response incoming, Rupam. 🚀';
