@@ -32,7 +32,8 @@ module.exports = async (req, res) => {
     }
   });
 
-  const mailOptions = {
+  // 1. Mail to Owner (Rupam)
+  const ownerMailOptions = {
     from: `"Rupam Portfolio" <${process.env.EMAIL_USER}>`,
     to: 'rupambairagya08@gmail.com',
     replyTo: email,
@@ -40,9 +41,21 @@ module.exports = async (req, res) => {
     text: `You received a message from: ${name} (${email})\n\nMessage:\n${message}`
   };
 
+  // 2. Auto-Response Confirmation Mail to Visitor
+  const visitorMailOptions = {
+    from: `"Rupam Bairagya" <${process.env.EMAIL_USER}>`,
+    to: email, // Sent to visitor's email address
+    subject: `Thank you for reaching out, ${name}!`,
+    text: `Hi ${name},\n\nThank you for getting in touch through my portfolio website! This is an automated confirmation to let you know that I have received your message safely and will review it shortly.\n\nHere is a copy of the message you sent:\n---\n"${message}"\n---\n\nBest regards,\nRupam Bairagya\nhttps://rupam-portfolio.pages.dev/`
+  };
+
   try {
-    await transporter.sendMail(mailOptions);
-    return res.status(200).json({ success: true, message: 'Message sent successfully via SMTP serverless function' });
+    // Send both emails in parallel
+    await Promise.all([
+      transporter.sendMail(ownerMailOptions),
+      transporter.sendMail(visitorMailOptions)
+    ]);
+    return res.status(200).json({ success: true, message: 'Message sent successfully to both admin and visitor' });
   } catch (error) {
     console.error('Serverless SMTP Error:', error);
     return res.status(500).json({ error: 'Failed to send message via Serverless SMTP' });
