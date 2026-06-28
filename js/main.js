@@ -321,8 +321,12 @@ function initContactForm() {
     setTimeout(() => {
       status.textContent = 'Routing through secure CDN gateways... 🌐';
       
-      // Post asynchronously to FormSubmit AJAX endpoint
-      fetch("https://formsubmit.co/ajax/rupambairagya08@gmail.com", {
+      // Determine endpoint dynamically (local backend vs production serverless)
+      const endpoint = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:5000/api/contact'
+        : '/api/contact';
+
+      fetch(endpoint, {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
