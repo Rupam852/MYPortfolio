@@ -321,10 +321,10 @@ function initContactForm() {
     setTimeout(() => {
       status.textContent = 'Routing through secure CDN gateways... 🌐';
       
-      // Determine endpoint dynamically (local backend vs production serverless)
+      // Determine endpoint dynamically (local Express vs Render backend)
       const endpoint = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
         ? 'http://localhost:5000/api/contact'
-        : '/api/contact';
+        : 'https://rupam-portfolio-api.onrender.com/api/contact';
 
       fetch(endpoint, {
         method: "POST",
