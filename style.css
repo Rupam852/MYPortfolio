@@ -35,6 +35,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -139,6 +140,17 @@ a:hover {
 }
 
 /* --- DECORATIVE GLOW BACKGROUNDS --- */
+.ambient-glow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .ambient-glow-1 {
   position: absolute;
   top: 15%;
@@ -810,6 +822,21 @@ nav a:hover, nav a.active {
   font-size: 0.95rem;
 }
 
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal-repo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
 /* --- TECHNICAL SKILLS MATRIX --- */
 .skills-grid {
   display: grid;
@@ -1222,8 +1249,32 @@ footer p {
     font-size: 2.75rem;
   }
   
-  nav ul {
-    display: none; /* Mobile menu behavior can be added */
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 10, 26, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+    z-index: 1000;
+  }
+  
+  #nav-menu.active {
+    display: block;
+  }
+  
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  #nav-menu .nav-btn {
+    width: 100%;
+    text-align: center;
   }
   
   .mobile-menu-toggle {
@@ -1284,5 +1335,16 @@ footer p {
   .timeline-panel {
     padding: 1.25rem;
     min-height: 350px;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .modal-actions a {
+    text-align: center;
+    justify-content: center;
   }
 }
