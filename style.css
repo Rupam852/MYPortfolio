@@ -420,6 +420,7 @@ nav a:hover, nav a.active {
   flex-direction: column;
   gap: 0.6rem;
   position: relative;
+  min-height: 0;
 }
 
 /* Custom Slim Scrollbars for Terminal Body */
