@@ -92,7 +92,7 @@ export class DevTerminal {
     line.className = `terminal-line line-${type}`;
     line.innerHTML = text;
     this.output.appendChild(line);
-    this.terminal.scrollTop = this.terminal.scrollHeight;
+    this.output.scrollTop = this.output.scrollHeight;
   }
 
   printWelcome() {
