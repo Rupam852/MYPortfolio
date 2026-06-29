@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Mobile Navigation Menu Toggle
   initMobileMenu();
 
-  // 6. Contact Form Logic
-  initContactForm();
+
 
   // 7. Load Live GitHub Stats
   loadGitHubData();
@@ -298,76 +297,7 @@ function initMobileMenu() {
   document.head.appendChild(style);
 }
 
-/* --- CONTACT FORM VALIDATION & SECURE TRANSMISSION --- */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status-msg');
-  const submitBtn = document.getElementById('submit-button');
 
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const name = document.getElementById('form-name').value;
-    const email = document.getElementById('form-email').value;
-    const message = document.getElementById('form-message').value;
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'TRANSMITTING SECURE DATA...';
-    status.style.color = 'var(--accent-primary)';
-    status.textContent = 'Encrypting packets... 🔐';
-
-    setTimeout(() => {
-      status.textContent = 'Routing through secure CDN gateways... 🌐';
-      
-      // Post to EmailJS API directly
-      fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: { 
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          service_id: 'service_to8h7pl',
-          template_id: 'template_bt5v2m9',
-          user_id: 'oA9hS-0oSa1wQ52S4',
-          template_params: {
-            from_name: name,
-            from_email: email,
-            message: message
-          }
-        })
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('EmailJS transmission failed');
-        }
-        return response.text();
-      })
-      .then(data => {
-        status.style.color = '#10b981'; // Green success
-        status.textContent = 'Packet securely delivered. Response incoming, Rupam. 🚀';
-        
-        // Reset Form
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Secure Transmission';
-
-        // Clear status after delay
-        setTimeout(() => {
-          status.textContent = '';
-        }, 6000);
-      })
-      .catch(error => {
-        status.style.color = '#f87171'; // Red error
-        status.textContent = 'Secure routing failed. Please email: rupambairagya08@gmail.com';
-        
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Secure Transmission';
-      });
-    }, 1500);
-  });
-}
 
 /* --- LIVE GITHUB STATS LOADER --- */
 async function loadGitHubData() {
