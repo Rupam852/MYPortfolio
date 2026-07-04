@@ -163,5 +163,35 @@ export const projects = [
     },
     liveLink: "https://github.com/Rupam852/Tic-Tac-Toe-Game",
     repoLink: "https://github.com/Rupam852/Tic-Tac-Toe-Game"
+  },
+  {
+    id: "calculator",
+    title: "Calculator",
+    subtitle: "Premium Dual-Platform Calculator",
+    description: "A modern, dual-platform calculator featuring a premium glassmorphic design system with ambient glowing backdrops, responsive layouts, and advanced calculation logic.",
+    longDescription: "This calculator is a hybrid project hosting both a high-fidelity web application (HTML/CSS/JS) and a native mobile application (Flutter/Dart). It features a glassmorphic design system with auto-matching themes, advanced calculation logic (such as smart backspace undo, continuous calculations, and scientific math notation formatting), dynamic font scaling to prevent overflow, and persistent calculation history using local storage.",
+    techStack: ["React", "TypeScript", "Flutter", "Dart", "LocalStorage", "Vercel"],
+    category: "Mobile",
+    metrics: {
+      "Design": "Glassmorphism & Neon Glow",
+      "Platforms": "Web & Mobile"
+    },
+    liveLink: "https://devcalculatoronline.vercel.app/",
+    repoLink: "https://github.com/Rupam852/Calculator"
+  },
+  {
+    id: "login-glass-effect",
+    title: "Login-Page-Glass-Effect",
+    subtitle: "Glassmorphic Login Portal",
+    description: "A gorgeous login page template featuring a premium glassmorphic interface, custom background art, and responsive styling.",
+    longDescription: "Login_page_Glass_Effect showcases clean glass container design with frosted-glass styling, borders, and subtle transparencies. Deployed on Vercel, it features full responsive support, micro-interactions, and beautiful custom background imagery.",
+    techStack: ["HTML5", "CSS3", "Vercel"],
+    category: "Frontend / Systems",
+    metrics: {
+      "Design": "Frosted Glassmorphism",
+      "Response": "Fluid Layout"
+    },
+    liveLink: "https://login-page-glass-effect.vercel.app",
+    repoLink: "https://github.com/Rupam852/Login_page_Glass_Effect"
   }
 ];
