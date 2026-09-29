@@ -1,50 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rupam Bairagya | Full-Stack Software Engineer & Product Builder</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%2305070f'/%3E%3Ctext y='68' x='10' font-family='monospace' font-weight='800' font-size='55' fill='%2306b6d4'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23030712'/%3E%3Ctext y='68' x='10' font-family='monospace' font-weight='800' font-size='55' fill='%2306b6d4'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio of Rupam Bairagya, a Product-Minded Full-Stack Developer specializing in React, TypeScript, Node.js, Kotlin, Flutter, and AI-powered document pipelines.">
+  <meta name="description" content="Portfolio of Rupam Bairagya, Full-Stack Software Engineer specializing in React, TypeScript, Python, Kotlin, Flutter, and AI pipelines.">
   <meta name="keywords" content="Rupam Bairagya, Rupam852, Full-Stack Developer, Software Engineer, React Developer, Kotlin, Flutter, TypeScript, Portfolio">
   <meta name="author" content="Rupam Bairagya">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Rupam Bairagya | Full-Stack Engineer">
+  <meta property="og:title" content="Rupam Bairagya | Full-Stack Software Engineer">
   <meta property="og:description" content="Portfolio of Rupam Bairagya, crafting high-fidelity web and mobile applications with AI integration.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/168587583?v=4">
   
   <!-- Styling -->
-  <link rel="stylesheet" href="style.css?v=1.5">
+  <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
 
   <!-- Background Decorative Glows -->
-  <div class="ambient-glow-container">
+  <div class="ambient-glow-container" aria-hidden="true">
     <div class="ambient-glow-1"></div>
     <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
   </div>
 
   <!-- HEADER & NAVIGATION -->
   <header id="header">
     <div class="container">
-      <a href="#" class="logo" id="site-logo">
-        <span class="logo-icon">&lt;/&gt;</span>
-        Rupam.dev
-      </a>
-      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
-      <nav id="nav-menu">
-        <ul>
-          <!-- Removed Get In Touch button -->
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-        </ul>
-      </nav>
+      <div class="nav-wrapper">
+        <a href="#" class="logo" id="site-logo" aria-label="Rupam Portfolio Home">
+          <span class="logo-badge">&lt;/&gt;</span>
+          <span>Rupam.dev</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav id="nav-menu" aria-label="Main Navigation">
+          <ul>
+            <li><a href="#about" class="nav-link">Analytics</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Capabilities</a></li>
+            <li><a href="#experience" class="nav-link">Journey</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navbar Controls & Status -->
+        <div class="nav-actions">
+          <div class="status-pill" title="Currently open for opportunities">
+            <span class="status-dot"></span>
+            <span>Available for Work</span>
+          </div>
+
+          <!-- Light/Dark Mode Switcher -->
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+            <!-- Sun Icon (shown in light mode) -->
+            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- Moon Icon (shown in dark mode) -->
+            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -54,45 +80,63 @@
       <div class="hero-grid">
         <!-- Hero Details -->
         <div class="hero-info">
-          <div class="hero-badge">⚡ SDE & Product Builder</div>
+          <div class="hero-badge">
+            <span>⚡</span>
+            <span>Full-Stack & AI Systems Architect</span>
+          </div>
+          
           <h1 class="hero-title">
-            Rupam Bairagya
-            <span id="typewriter-text">Full-Stack Software Engineer</span>
+            Hi, I'm Rupam
           </h1>
+          
+          <div class="hero-subtitle">
+            <span id="typewriter-text">Full-Stack Software Engineer</span>
+          </div>
+          
           <p class="hero-bio">
-            I build high-fidelity, production-grade applications that solve real-world problems. 
-            Combining robust architectural designs with fluid, responsive user interfaces.
+            Engineering resilient full-stack platforms, distributed systems, and AI-powered document intelligence workflows. Passionate about performant code, polyglot architectures, and polished UX.
           </p>
+          
+          <div class="hero-ctas">
+            <a href="#projects" class="btn-primary">
+              <span>⚡ View Featured Work</span>
+              <span>➜</span>
+            </a>
+            <a href="mailto:rupambairagya08@gmail.com" class="btn-secondary">
+              <span>💬 Get In Touch</span>
+            </a>
+          </div>
+
           <div class="hero-socials">
             <!-- GitHub Link -->
-            <a href="https://github.com/Rupam852" target="_blank" class="social-icon" aria-label="GitHub">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <a href="https://github.com/Rupam852" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
               </svg>
             </a>
             <!-- LinkedIn Link -->
-            <a href="https://www.linkedin.com/in/rupam-bairagya" target="_blank" class="social-icon" aria-label="LinkedIn">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <a href="https://www.linkedin.com/in/rupam-bairagya" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M0 1.146C0 .513.52 0 1.146 0h13.708C15.488 0 16 .513 16 1.146v13.708c0 .633-.513 1.146-1.146 1.146H1.146C.52 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
               </svg>
             </a>
             <!-- Links Hub -->
-            <a href="https://link-flow-program.vercel.app/rupam-bairagya" target="_blank" class="social-icon" aria-label="Links Hub">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <a href="https://link-flow-program.vercel.app/rupam-bairagya" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Custom Links Hub" title="Links Hub">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
               </svg>
             </a>
             <!-- Email -->
-            <a href="mailto:rupambairagya08@gmail.com" class="social-icon" aria-label="Email">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <a href="mailto:rupambairagya08@gmail.com" class="social-icon" aria-label="Send Direct Email" title="Email">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
             </a>
           </div>
         </div>
         
-        <!-- Hero Terminal Widget -->
-        <div class="terminal-wrapper glass-panel" id="terminal-nexus">
+        <!-- Hero Interactive Terminal Nexus -->
+        <div class="terminal-wrapper" id="terminal-nexus">
           <div class="terminal-header">
             <div class="terminal-controls">
               <span class="terminal-dot dot-red"></span>
@@ -100,43 +144,47 @@
               <span class="terminal-dot dot-green"></span>
             </div>
             <div class="terminal-title">guest@rupam852: ~</div>
+            <div class="terminal-quick-chips">
+              <button class="chip-btn" onclick="document.getElementById('terminal-input').value='projects'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">projects</button>
+              <button class="chip-btn" onclick="document.getElementById('terminal-input').value='skills'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">skills</button>
+              <button class="chip-btn" onclick="document.getElementById('terminal-input').value='matrix'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));">matrix</button>
+            </div>
           </div>
           <div class="terminal-body" id="terminal-output">
-            <!-- Output lines appended by JS -->
+            <!-- Dynamic terminal lines -->
           </div>
-          <div class="terminal-body" style="flex: 0; padding-top: 0; padding-bottom: 0; background: transparent; overflow: visible;">
-            <div class="terminal-input-line">
-              <span class="terminal-prompt">guest@rupam852:~$</span>
-              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="Type help...">
-            </div>
+          <div class="terminal-input-bar">
+            <span class="terminal-prompt">guest@rupam852:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="Type help or click a command chip above...">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT / GITHUB STATS SECTION -->
+  <!-- GITHUB STATS & ANALYTICS SECTION -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">GitHub Analytics</h2>
+      <h2 class="section-title">Engineering Velocity</h2>
+      <p class="section-subtitle">Real-time telemetry and open-source contributions synced live from GitHub.</p>
       
       <!-- Key Stats Row -->
       <div class="stats-row">
         <div class="stat-card glass-panel">
-          <div class="stat-value">8+</div>
+          <div class="stat-value">14+</div>
           <div class="stat-label">Live SaaS Apps</div>
         </div>
         <div class="stat-card glass-panel">
-          <div class="stat-value" id="stat-repos">16</div>
-          <div class="stat-label">Public Repos</div>
+          <div class="stat-value" id="stat-repos">31</div>
+          <div class="stat-label">Public Repositories</div>
         </div>
         <div class="stat-card glass-panel">
-          <div class="stat-value" id="stat-lang">TS</div>
-          <div class="stat-label">Top Language</div>
+          <div class="stat-value" id="stat-lang">TS / PY</div>
+          <div class="stat-label">Polyglot Core</div>
         </div>
         <div class="stat-card glass-panel">
-          <div class="stat-value" id="stat-stars">12</div>
-          <div class="stat-label">Total Stars</div>
+          <div class="stat-value" id="stat-stars">15+</div>
+          <div class="stat-label">Total Stars Earned</div>
         </div>
       </div>
 
@@ -149,17 +197,19 @@
             <span class="activity-meta">Weekly Activity Tracker</span>
           </div>
           <div class="github-activity-graph">
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rupam852&theme=react-dark&bg_color=05070F&color=06B6D4&line=6366F1&point=E2E8F0&area=true&area_color=0A0F24&hide_border=true" alt="Rupam's GitHub Activity Graph">
+            <img id="github-graph-img" src="https://github-readme-activity-graph.vercel.app/graph?username=Rupam852&theme=react-dark&bg_color=0f172a&color=06B6D4&line=8B5CF6&point=F8FAFC&area=true&area_color=1E293B&hide_border=true" alt="Rupam's GitHub Activity Graph" loading="lazy">
           </div>
         </div>
 
         <!-- Snake / Streak Card -->
         <div class="snake-card glass-panel">
-          <h3>Commit Streak Stats</h3>
-          <div class="snake-container">
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=05070F&stroke=6366F1&ring=06B6D4&fire=06B6D4&currStreakLabel=E2E8F0&sideLabels=E2E8F0&dates=6366F1&currStreakNum=06B6D4&sideNums=E2E8F0" alt="Commit Streaks">
+          <div class="activity-header">
+            <h3>Commit Streak Telemetry</h3>
+            <span class="activity-meta">Real-time Sync</span>
           </div>
-          <p class="activity-meta">Real-time statistics synced from GitHub REST API</p>
+          <div class="snake-container">
+            <img id="github-streak-img" src="https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=0F172A&stroke=8B5CF6&ring=06B6D4&fire=06B6D4&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=8B5CF6&currStreakNum=06B6D4&sideNums=F8FAFC" alt="Commit Streak Statistics" loading="lazy">
+          </div>
         </div>
       </div>
     </div>
@@ -169,10 +219,11 @@
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Full-stack web applications, native mobile clients, and AI solutions built for real-world impact.</p>
       
       <!-- Filter Controls -->
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="Full-Stack / AI">Full-Stack / AI</button>
         <button class="filter-btn" data-filter="Full-Stack / Cloud">Full-Stack / Cloud</button>
         <button class="filter-btn" data-filter="Mobile">Mobile</button>
@@ -186,149 +237,169 @@
     </div>
   </section>
 
-  <!-- TECHNICAL SKILLS MATRIX -->
+  <!-- TECHNICAL CAPABILITIES MATRIX -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Technical Capabilities</h2>
+      <p class="section-subtitle">Core engineering competencies, languages, cloud frameworks, and AI toolchains.</p>
+      
       <div class="skills-grid">
         <!-- Languages -->
         <div class="skills-card glass-panel">
-          <h3><span>◈</span> Languages</h3>
+          <h3><span>◈</span> Core Languages</h3>
           <div class="skill-tags">
             <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
             <span class="skill-tag">Kotlin</span>
             <span class="skill-tag">Dart</span>
-            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
             <span class="skill-tag">Java</span>
             <span class="skill-tag">C++</span>
+            <span class="skill-tag">SQL</span>
             <span class="skill-tag">HTML5 / CSS3</span>
           </div>
         </div>
 
         <!-- Frontend & Mobile -->
         <div class="skills-card glass-panel">
-          <h3><span>◈</span> Frontend & Mobile</h3>
+          <h3><span>◈</span> Frontend & Native Mobile</h3>
           <div class="skill-tags">
             <span class="skill-tag">React</span>
             <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Vite</span>
             <span class="skill-tag">Flutter</span>
             <span class="skill-tag">Jetpack Compose</span>
+            <span class="skill-tag">Vite</span>
             <span class="skill-tag">TailwindCSS</span>
             <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Web Workers</span>
           </div>
         </div>
 
-        <!-- Backend & DB -->
+        <!-- Backend & Cloud -->
         <div class="skills-card glass-panel">
-          <h3><span>◈</span> Backend & Database</h3>
+          <h3><span>◈</span> Backend & Cloud Infrastructure</h3>
           <div class="skill-tags">
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Express</span>
+            <span class="skill-tag">FastAPI</span>
             <span class="skill-tag">Firebase</span>
             <span class="skill-tag">Supabase</span>
             <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">MongoDB</span>
             <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Google Cloud / Vercel</span>
           </div>
         </div>
 
         <!-- AI & ML -->
         <div class="skills-card glass-panel">
-          <h3><span>◈</span> AI / ML Stack</h3>
+          <h3><span>◈</span> AI & Document Intelligence</h3>
           <div class="skill-tags">
-            <span class="skill-tag">OpenAI API</span>
             <span class="skill-tag">Gemini API</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Computer Vision</span>
             <span class="skill-tag">RAG Architecture</span>
-            <span class="skill-tag">Document Intelligence</span>
             <span class="skill-tag">OCR Pipelines</span>
             <span class="skill-tag">Vector Search</span>
+            <span class="skill-tag">PyPDF / Document AI</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE TIMELINE -->
+  <!-- ENGINEERING JOURNEY / EXPERIENCE TIMELINE -->
   <section id="experience">
     <div class="container">
       <h2 class="section-title">Engineering Journey</h2>
-      <div class="timeline-horizontal-scroll">
-        <div class="timeline-horizontal-items">
-          
-          <!-- Stage 1 -->
-          <div class="timeline-horizontal-item">
-            <div class="timeline-panel glass-panel">
-              <div class="timeline-date-badge">Jan 2026 - Present</div>
-              <h3 class="timeline-title">Independent Full-Stack Developer</h3>
-              <h4 class="timeline-subtitle">Self-Employed & Open-Source</h4>
-              <ul class="timeline-bullets">
-                <li>Shipped 8+ production-ready apps including <strong>OmniPDF</strong> (handling TS gateway to Python workers orchestration).</li>
-                <li>Engineered virtual cloud directory structures using Google Drive SDK, Firestore, and optimistic state updates on <strong>G-Drive-Vault</strong>.</li>
-                <li>Optimized web apps with offline-first persistence layers (IndexedDB, Web Workers, Firestore sync pipelines).</li>
-              </ul>
-            </div>
+      <p class="section-subtitle">Milestones, open-source product builds, and academic computer science foundations.</p>
+      
+      <div class="timeline-container">
+        <!-- Stage 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-panel glass-panel">
+            <span class="timeline-date-badge">Jan 2026 - Present</span>
+            <h3 class="timeline-title">Independent Full-Stack Developer & Product Builder</h3>
+            <h4 class="timeline-subtitle">Open-Source Ecosystem & Production SaaS Apps</h4>
+            <ul class="timeline-bullets">
+              <li>Architected and shipped 14+ live apps including <strong>Fasal-Drishti-AI</strong> (crop diagnostic vision), <strong>OmniPDF</strong> (hybrid TS gateway + Python workers), and <strong>AI-Career-Mentor</strong>.</li>
+              <li>Engineered virtual cloud directory structures using Google Drive SDK, Firestore, and optimistic UI synchronization on <strong>G-Drive-Vault</strong> and <strong>Drive_Flow</strong>.</li>
+              <li>Engineered zero-trust WebRTC browser file sharing on <strong>Neo-Files-Transfer</strong> with sub-second direct peer transfers.</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Stage 2 -->
-          <div class="timeline-horizontal-item">
-            <div class="timeline-panel glass-panel">
-              <div class="timeline-date-badge">2024 - 2025</div>
-              <h3 class="timeline-title">Native Mobile & Systems Developer</h3>
-              <h4 class="timeline-subtitle">Open Source Product Innovation</h4>
-              <ul class="timeline-bullets">
-                <li>Shipped <strong>CloudStream-TV</strong>, a native media streaming client for Android and Android TV using Kotlin, Jetpack Compose, and Coroutines.</li>
-                <li>Built <strong>Expense-App</strong>, an offline-first budget visualizer in Flutter/Dart utilizing HiveDB, SQLite, and the BLoC pattern.</li>
-                <li>Constructed local OCR engines, RAG pipelines, and API services using OpenAI and Gemini.</li>
-              </ul>
-            </div>
+        <!-- Stage 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-panel glass-panel">
+            <span class="timeline-date-badge">2024 - 2025</span>
+            <h3 class="timeline-title">Native Mobile & Systems Engineer</h3>
+            <h4 class="timeline-subtitle">Cross-Platform & Native Android Ecosystem</h4>
+            <ul class="timeline-bullets">
+              <li>Shipped <strong>CloudStream-TV</strong>, a high-fidelity native media client for Android and Android TV with Kotlin, Jetpack Compose, and reactive Flow pipelines.</li>
+              <li>Built <strong>Expense-App</strong>, an offline-first budget manager in Flutter/Dart utilizing HiveDB, SQLite, and BLoC state architecture.</li>
+              <li>Created local OCR engines, RAG pipelines, and automated document parsing workflows.</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Stage 3 -->
-          <div class="timeline-horizontal-item">
-            <div class="timeline-panel glass-panel">
-              <div class="timeline-date-badge">2022 - 2026</div>
-              <h3 class="timeline-title">B.Tech in Computer Science</h3>
-              <h4 class="timeline-subtitle">Academic CS Foundations</h4>
-              <ul class="timeline-bullets">
-                <li>Mastered core foundations: Data Structures & Algorithms, Systems Design, Operating Systems, Computer Networks, and DBMS.</li>
-                <li>Participated in hackathons and college developer groups, focusing on full-stack web and cross-platform native integrations.</li>
-                <li>Designed desktop application prototypes and CLI tools in C++ and Java.</li>
-              </ul>
-            </div>
+        <!-- Stage 3 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-panel glass-panel">
+            <span class="timeline-date-badge">2022 - 2026</span>
+            <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+            <h4 class="timeline-subtitle">Academic Foundations & Systems Mastery</h4>
+            <ul class="timeline-bullets">
+              <li>Mastered core foundations: Data Structures & Algorithms, Systems Design, Operating Systems, Computer Networks, and DBMS.</li>
+              <li>Led university hackathon builds, winning recognition for practical web architectures and native cross-platform mobile apps.</li>
+              <li>Authored clean, documented lab repositories for compiler design, operating systems, and network protocols.</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Stage 4 -->
-          <div class="timeline-horizontal-item">
-            <div class="timeline-panel glass-panel">
-              <div class="timeline-date-badge">2021</div>
-              <h3 class="timeline-title">Code Genesis & Early Automation</h3>
-              <h4 class="timeline-subtitle">First Compilations & Web Scraping</h4>
-              <ul class="timeline-bullets">
-                <li>Commenced coding journey writing automated web scripts, basic web pages, and file system helpers in Python, C, and HTML/CSS.</li>
-                <li>Discovered a passion for product development and workflow automation.</li>
-              </ul>
-            </div>
+        <!-- Stage 4 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-panel glass-panel">
+            <span class="timeline-date-badge">2021</span>
+            <h3 class="timeline-title">Code Genesis & Early Automation</h3>
+            <h4 class="timeline-subtitle">First Compilations & Workflow Automation</h4>
+            <ul class="timeline-bullets">
+              <li>Commenced programming journey writing web scrapers, command-line utilities, and algorithms in Python, C, and JavaScript.</li>
+              <li>Developed an enduring drive to craft software that removes friction from human workflows.</li>
+            </ul>
           </div>
-
         </div>
       </div>
     </div>
   </section>
 
-
   <!-- FOOTER -->
   <footer>
-    <div class="container">
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/Rupam852" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/rupam-bairagya" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.52 0 1.146 0h13.708C15.488 0 16 .513 16 1.146v13.708c0 .633-.513 1.146-1.146 1.146H1.146C.52 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+          </svg>
+        </a>
+      </div>
       <p>&copy; 2026 Rupam Bairagya. All rights reserved.</p>
-      <p class="footer-credits">Built for high performance, accessibility, and speed.</p>
+      <p class="footer-credits">Crafted with precision, responsive design & zero clutter.</p>
     </div>
   </footer>
 
   <!-- DETAIL MODAL OVERLAY -->
   <div class="modal" id="project-modal" aria-hidden="true" role="dialog">
-    <div class="modal-content glass-panel">
+    <div class="modal-content">
       <button class="modal-close" id="modal-close-btn" aria-label="Close Project Modal">&times;</button>
       <div id="modal-display-body">
         <!-- Rendered dynamically on click -->
@@ -336,7 +407,14 @@
     </div>
   </div>
 
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
   <!-- Javascript Modules -->
-  <script type="module" src="js/main.js?v=1.1"></script>
+  <script type="module" src="js/main.js?v=2.0"></script>
 </body>
 </html>

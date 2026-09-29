@@ -205,11 +205,11 @@ export class DevTerminal {
     return `
 <span class="hl-title">◈ GITHUB ANALYTICS (RUPAM852)</span>
 --------------------------------------------------------------
-* <span class="hl-label">Repositories</span>: 14 Public Repositories
-* <span class="hl-label">Featured Work</span>: OmniPDF (AI PDF Processor), G-Drive-Vault (Cloud File System)
-* <span class="hl-label">Top Language</span>: TypeScript / Dart / Kotlin
+* <span class="hl-label">Repositories</span>: 31 Public Repositories
+* <span class="hl-label">Featured Work</span>: Fasal-Drishti-AI, OmniPDF, AI-Career-Mentor, G-Drive-Vault, CloudStream-TV
+* <span class="hl-label">Top Language</span>: TypeScript / Python / Kotlin / Dart / JavaScript
 * <span class="hl-label">Stats Status</span>: Active Open-Source Contributor (100% public code)
-* <span class="hl-label">Contribution Snake</span>: Output Dark and Light matrix running in background
+* <span class="hl-label">Live Deployments</span>: 12+ Production Apps hosted on Vercel & Cloudflare
     `;
   }
 

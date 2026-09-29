@@ -1,5 +1,20 @@
 export const projects = [
   {
+    id: "fasal-drishti-ai",
+    title: "Fasal-Drishti-AI",
+    subtitle: "AI Agricultural Vision & Crop Health Diagnostic Engine",
+    description: "An AI-powered agricultural diagnosis platform enabling instant crop disease detection, leaf scan analysis, and tailored treatment recommendations.",
+    longDescription: "Fasal-Drishti-AI is a modern agricultural intelligence platform designed to empower farmers and agronomists. Using state-of-the-art computer vision models, the system processes plant leaf imagery in real time, accurately identifies bacterial/fungal infections, assesses severity, and delivers localized pesticide and remediation advice. Features include offline scan caching, multi-language diagnostic breakdowns, and a fluid mobile-optimized dashboard.",
+    techStack: ["Kotlin", "Python", "Computer Vision", "AI / ML", "FastAPI", "Vercel"],
+    category: "Full-Stack / AI",
+    metrics: {
+      "Model": "Agricultural Vision AI",
+      "Diagnosis": "Real-Time Crop Health"
+    },
+    liveLink: "https://fasaldrishti-ai.vercel.app/",
+    repoLink: "https://github.com/Rupam852/Fasal-Drishti-AI"
+  },
+  {
     id: "omnipdf",
     title: "OmniPDF",
     subtitle: "AI-Powered PDF Processing Platform",
@@ -13,6 +28,36 @@ export const projects = [
     },
     liveLink: "https://omnipdf-converter.vercel.app",
     repoLink: "https://github.com/Rupam852/OmniPDF"
+  },
+  {
+    id: "ai-career-mentor",
+    title: "AI-Career-Mentor",
+    subtitle: "AI-Powered Career Guidance & Mentorship Hub",
+    description: "An intelligent career mentorship platform that evaluates student skill profiles, parses resumes, and generates personalized industry learning paths.",
+    longDescription: "AI-Career-Mentor guides tech students and aspiring software engineers by analyzing target roles against current capabilities. Integrated with LLM intelligence, it generates step-by-step career roadmaps, mock interview questions, ATS resume reviews, and targeted skill development milestones to prepare candidates for engineering roles.",
+    techStack: ["Python", "JavaScript", "HTML5", "CSS3", "Gemini API", "Vercel"],
+    category: "Full-Stack / AI",
+    metrics: {
+      "Intelligence": "LLM Career Guidance",
+      "Features": "Dynamic Roadmap Generator"
+    },
+    liveLink: "https://ai-career-mentor-project.vercel.app/",
+    repoLink: "https://github.com/Rupam852/AI-Career-Mentor"
+  },
+  {
+    id: "resume-analyzer",
+    title: "Resume-Analyzer",
+    subtitle: "AI Resume Screening & ATS Matcher",
+    description: "An AI-powered ATS resume analyzer providing instant feedback, score metrics, keyword optimization, and formatting suggestions for job seekers.",
+    longDescription: "Resume-Analyzer parses submitted resumes against job descriptions to provide automated ATS scoring, identifying missing keywords, formatting anomalies, and section improvements to enhance interview callback rates.",
+    techStack: ["JavaScript", "HTML5", "CSS3", "AI / ML", "PDF Parser", "Vercel"],
+    category: "Full-Stack / AI",
+    metrics: {
+      "Analysis": "Real-time ATS Scoring",
+      "Speed": "Instant PDF/DOCX Parsing"
+    },
+    liveLink: "https://ai-resume-analyzer-tech.vercel.app/",
+    repoLink: "https://github.com/Rupam852/Resume-Analyzer"
   },
   {
     id: "gdrive-vault",
@@ -41,7 +86,7 @@ export const projects = [
       "Analytics": "Real-time flow simulation",
       "Optimization": "Predictive timing patterns"
     },
-    liveLink: "https://github.com/Rupam852/TRAFFICFLOW-AI",
+    liveLink: "https://trafficflowai.vercel.app",
     repoLink: "https://github.com/Rupam852/TRAFFICFLOW-AI"
   },
   {
@@ -71,7 +116,7 @@ export const projects = [
       "Privacy": "Direct peer-to-peer piping",
       "Speed": "Zero-server transit delay"
     },
-    liveLink: "https://github.com/Rupam852/Neo-Files-Transfer",
+    liveLink: "https://neofilestransfer.site",
     repoLink: "https://github.com/Rupam852/Neo-Files-Transfer"
   },
   {
@@ -86,7 +131,7 @@ export const projects = [
       "UX": "Card-based asset view",
       "Latency": "Sub-second query filters"
     },
-    liveLink: "https://github.com/Rupam852/Drive_Flow",
+    liveLink: "https://driveflowrupam.vercel.app",
     repoLink: "https://github.com/Rupam852/Drive_Flow"
   },
   {
@@ -120,25 +165,40 @@ export const projects = [
     repoLink: "https://github.com/Rupam852/Expense-App"
   },
   {
+    id: "wrist-rx",
+    title: "Wrist-Rx",
+    subtitle: "Wearable Health & Prescription Tracker",
+    description: "A smart health monitoring and prescription management client offering dosage reminders, vital health telemetry, and emergency alerts.",
+    longDescription: "Wrist-Rx is engineered for healthcare tracking across mobile and wearable touchpoints. Built with Flutter and Dart, it manages medication schedules, logs vital biometric metrics, and syncs medical histories securely with cloud backends.",
+    techStack: ["Flutter", "Dart", "Firebase", "WearOS UI", "Vercel"],
+    category: "Mobile",
+    metrics: {
+      "Platform": "Cross-Platform Flutter",
+      "Sync": "Cloud Health Telemetry"
+    },
+    liveLink: "https://wrist-rx.vercel.app",
+    repoLink: "https://github.com/Rupam852/Wrist-Rx"
+  },
+  {
     id: "gmailmnt",
     title: "GmailMNT",
     subtitle: "Gmail Account Management Dashboard",
-    description: "A smart account organizer tool for managing email filters, labels, and templates across multiple inbox accounts.",
+    description: "A smart Gmail account management tool for organizing emails, managing multiple accounts, and improving productivity.",
     longDescription: "GmailMNT integrates with the official Google Gmail APIs to construct an account manager interface. Users can deploy custom automation rules, filter high-volume folders instantly, and compose canned template responses using secure OAuth credentials.",
-    techStack: ["JavaScript", "Node.js", "Gmail API", "OAuth 2.0", "Vercel"],
+    techStack: ["Kotlin", "JavaScript", "Node.js", "Gmail API", "OAuth 2.0", "Vercel"],
     category: "Full-Stack / Cloud",
     metrics: {
       "Scope": "Multi-Account Sync",
       "Automation": "Custom Inbox Rules Engine"
     },
-    liveLink: "https://github.com/Rupam852/GmailMNT",
+    liveLink: "https://gmailmntorg.vercel.app/",
     repoLink: "https://github.com/Rupam852/GmailMNT"
   },
   {
     id: "link-flow",
     title: "Link-Flow",
-    subtitle: "Developer Bookmark Hub",
-    description: "A card-based organizer designed to aggregate, tag, and search developer resources with keyboard shortcuts and metadata scrapers.",
+    subtitle: "Developer Bookmark & Profile Hub",
+    description: "A modern link management platform that helps users organize, share, and access multiple links from a single customizable profile page.",
     longDescription: "Link-Flow is an active bookmark dashboard designed to help developers catalog websites, tools, and documentations. Built using React and TailwindCSS, it coordinates with a Firebase backend to scrape metadata (og:title, og:description, og:image) for any pasted URL, auto-tag resources, and allow instant keyboard-shortcut navigation for power users.",
     techStack: ["React", "TypeScript", "Firebase", "TailwindCSS", "Vercel"],
     category: "Frontend / Systems",
@@ -146,23 +206,8 @@ export const projects = [
       "Features": "Auto Metadata Scraper",
       "UX": "Keyboard Shortcut Navigation"
     },
-    liveLink: "https://link-flow-program.vercel.app",
+    liveLink: "https://link-flow-program.vercel.app/",
     repoLink: "https://github.com/Rupam852/Link-Flow"
-  },
-  {
-    id: "tic-tac-toe",
-    title: "Tic-Tac-Toe-Game",
-    subtitle: "Interactive Web-Based Game",
-    description: "A responsive web-based Tic-Tac-Toe game featuring a glassmorphic user interface, active score tracking, and smooth animations.",
-    longDescription: "This Tic-Tac-Toe interface was created to practice clean layout transitions and game logic structures in TypeScript. It supports fully responsive grids, local scoreboard states, and micro-animations for grid interactions.",
-    techStack: ["TypeScript", "HTML5", "CSS3", "GitHub Pages"],
-    category: "Frontend / Systems",
-    metrics: {
-      "Design": "Sleek Glassmorphic Grid",
-      "Features": "Active Score Tracking"
-    },
-    liveLink: "https://github.com/Rupam852/Tic-Tac-Toe-Game",
-    repoLink: "https://github.com/Rupam852/Tic-Tac-Toe-Game"
   },
   {
     id: "calculator",
@@ -180,6 +225,36 @@ export const projects = [
     repoLink: "https://github.com/Rupam852/Calculator"
   },
   {
+    id: "cmd-music-downloader",
+    title: "CMD_Music_Downloader",
+    subtitle: "CLI High-Speed Audio Stream Downloader",
+    description: "A multithreaded command-line utility for searching, extracting, and downloading high-bitrate audio streams with automatic ID3 tag embedding.",
+    longDescription: "CMD_Music_Downloader is built in Python for developers and terminal enthusiasts who need rapid, automated audio stream extractions. Featuring concurrent chunk downloading, automatic album art fetching, and seamless FFmpeg conversion.",
+    techStack: ["Python", "CLI", "FFmpeg", "Multithreading", "Metadata API"],
+    category: "Frontend / Systems",
+    metrics: {
+      "Concurrency": "Multithreaded Streams",
+      "Audio": "Lossless / 320kbps MP3"
+    },
+    liveLink: "https://github.com/Rupam852/CMD_Music_Downloader",
+    repoLink: "https://github.com/Rupam852/CMD_Music_Downloader"
+  },
+  {
+    id: "payment-page",
+    title: "Payment_Page",
+    subtitle: "Glassmorphic Checkout & Payment Portal",
+    description: "A payment gateway UI template built with modern glassmorphism, responsive form validation, and interactive credit card UX flow.",
+    longDescription: "Payment_Page is a responsive checkout interface featuring interactive credit card flip animations, realtime field formatting (Luhn algorithm validation, expiry masking), and smooth micro-interactions.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Vercel"],
+    category: "Frontend / Systems",
+    metrics: {
+      "Design": "Modern Glass UI",
+      "Validation": "Real-Time Card Parsing"
+    },
+    liveLink: "https://payment-page-build.vercel.app/",
+    repoLink: "https://github.com/Rupam852/Payment_Page"
+  },
+  {
     id: "login-glass-effect",
     title: "Login-Page-Glass-Effect",
     subtitle: "Glassmorphic Login Portal",
@@ -193,5 +268,20 @@ export const projects = [
     },
     liveLink: "https://login-page-glass-effect.vercel.app",
     repoLink: "https://github.com/Rupam852/Login_page_Glass_Effect"
+  },
+  {
+    id: "tic-tac-toe",
+    title: "Tic-Tac-Toe-Game",
+    subtitle: "Interactive Web-Based Game",
+    description: "A responsive web-based Tic-Tac-Toe game featuring a glassmorphic user interface, active score tracking, and smooth animations.",
+    longDescription: "This Tic-Tac-Toe interface was created to practice clean layout transitions and game logic structures in TypeScript. It supports fully responsive grids, local scoreboard states, and micro-animations for grid interactions.",
+    techStack: ["TypeScript", "HTML5", "CSS3", "Vercel"],
+    category: "Frontend / Systems",
+    metrics: {
+      "Design": "Sleek Glassmorphic Grid",
+      "Features": "Active Score Tracking"
+    },
+    liveLink: "https://tic-tac-toe-gamego.vercel.app/",
+    repoLink: "https://github.com/Rupam852/Tic-Tac-Toe-Game"
   }
 ];
