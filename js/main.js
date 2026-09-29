@@ -55,14 +55,14 @@ function updateGitHubWidgets(theme) {
 
   if (theme === 'light') {
     if (graphImg) {
-      graphImg.src = 'https://github-readme-activity-graph.vercel.app/graph?username=Rupam852&theme=default&bg_color=ffffff&color=0284c7&line=7c3aed&point=0f172a&area=true&area_color=f1f5f9&hide_border=true';
+      graphImg.src = 'https://ghchart.rshah.org/0284c7/Rupam852';
     }
     if (streakImg) {
       streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=light&hide_border=true&background=FFFFFF&stroke=7C3AED&ring=0284C7&fire=0284C7&currStreakLabel=0F172A&sideLabels=475569&dates=7C3AED&currStreakNum=0284C7&sideNums=0F172A';
     }
   } else {
     if (graphImg) {
-      graphImg.src = 'https://github-readme-activity-graph.vercel.app/graph?username=Rupam852&theme=react-dark&bg_color=0f172a&color=06B6D4&line=8B5CF6&point=F8FAFC&area=true&area_color=1E293B&hide_border=true';
+      graphImg.src = 'https://ghchart.rshah.org/06b6d4/Rupam852';
     }
     if (streakImg) {
       streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=0F172A&stroke=8B5CF6&ring=06B6D4&fire=06B6D4&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=8B5CF6&currStreakNum=06B6D4&sideNums=F8FAFC';

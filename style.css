@@ -788,12 +788,32 @@ header.scrolled .nav-wrapper {
   margin-bottom: 1rem;
 }
 
-.activity-meta {
-  font-size: 0.8rem;
-  color: var(--text-tertiary);
+.github-activity-graph {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.75rem 0.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.github-activity-graph img,
+.github-activity-graph img {
+  width: 100%;
+  min-width: 650px;
+  height: auto;
+  display: block;
+}
+
+.snake-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .snake-container img {
   width: 100%;
   height: auto;
