@@ -25,19 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   THEME SWITCHER ENGINE (DEFAULT: DARK MODE)
+   THEME SWITCHER ENGINE (DEFAULT: LIGHT MODE)
    ========================================================================== */
 function initTheme() {
   const toggleBtn = document.getElementById('theme-toggle-btn');
-  const storedTheme = localStorage.getItem('rupam_theme') || 'dark';
+  const storedTheme = localStorage.getItem('rupam_theme') || 'light';
 
   // Apply stored or default theme
   applyTheme(storedTheme);
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       applyTheme(newTheme);
       localStorage.setItem('rupam_theme', newTheme);
     });

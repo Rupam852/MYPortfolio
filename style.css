@@ -4,65 +4,7 @@
    DESIGN TOKENS & CURATED THEMES (DARK & LIGHT)
    ========================================================================== */
 :root {
-  /* DARK THEME (DEFAULT) - DEEP OBSIDIAN & ELECTRIC SKY/INDIGO */
-  --bg-base: #090d16;
-  --bg-canvas-radial: radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
-  --bg-surface: rgba(15, 23, 42, 0.72);
-  --bg-surface-hover: rgba(26, 38, 64, 0.85);
-  --bg-elevated: #0f172a;
-  --bg-card: rgba(15, 23, 42, 0.68);
-  --bg-card-hover: rgba(22, 33, 56, 0.85);
-  --bg-tag: rgba(56, 189, 248, 0.08);
-  --bg-tag-hover: rgba(56, 189, 248, 0.16);
-  --bg-terminal: rgba(10, 15, 26, 0.94);
-  --bg-terminal-header: rgba(15, 23, 42, 0.88);
-  --bg-terminal-input: rgba(15, 23, 42, 0.75);
-
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.14);
-  --border-glow: rgba(56, 189, 248, 0.35);
-  --border-active: #38bdf8;
-
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
-  --text-inverse: #090d16;
-
-  --accent-cyan: #38bdf8;
-  --accent-violet: #818cf8;
-  --accent-blue: #3b82f6;
-  --accent-emerald: #10b981;
-  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-  --accent-glow: rgba(56, 189, 248, 0.22);
-  --title-gradient: linear-gradient(135deg, #ffffff 10%, #cbd5e1 55%, #38bdf8 100%);
-
-  --nav-bg: rgba(9, 13, 22, 0.78);
-  --nav-border: rgba(255, 255, 255, 0.09);
-
-  --modal-overlay: rgba(3, 7, 18, 0.82);
-
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
-  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.05);
-  --card-shadow-hover: 0 16px 36px -4px rgba(0, 0, 0, 0.45), 0 0 24px rgba(56, 189, 248, 0.12);
-
-  --font-header: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-pill: 9999px;
-
-  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* LIGHT THEME - CRISP PORCELAIN SLATE & ROYAL INDIGO / SKY BLUE */
-[data-theme="light"] {
+  /* LIGHT THEME (DEFAULT) - CRISP PORCELAIN SLATE & ROYAL INDIGO / SKY BLUE */
   --bg-base: #f8fafc;
   --bg-canvas-radial: radial-gradient(circle at 50% -10%, rgba(79, 70, 229, 0.05) 0%, transparent 60%);
   --bg-surface: rgba(255, 255, 255, 0.88);
@@ -104,6 +46,64 @@
   --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.1);
   --card-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 8px 20px -3px rgba(15, 23, 42, 0.03);
   --card-shadow-hover: 0 12px 32px -5px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(79, 70, 229, 0.2);
+
+  --font-header: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* DARK THEME - DEEP OBSIDIAN & ELECTRIC SKY/INDIGO */
+[data-theme="dark"] {
+  --bg-base: #090d16;
+  --bg-canvas-radial: radial-gradient(circle at 50% -10%, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
+  --bg-surface: rgba(15, 23, 42, 0.72);
+  --bg-surface-hover: rgba(26, 38, 64, 0.85);
+  --bg-elevated: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.68);
+  --bg-card-hover: rgba(22, 33, 56, 0.85);
+  --bg-tag: rgba(56, 189, 248, 0.08);
+  --bg-tag-hover: rgba(56, 189, 248, 0.16);
+  --bg-terminal: rgba(10, 15, 26, 0.94);
+  --bg-terminal-header: rgba(15, 23, 42, 0.88);
+  --bg-terminal-input: rgba(15, 23, 42, 0.75);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-glow: rgba(56, 189, 248, 0.35);
+  --border-active: #38bdf8;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  --text-inverse: #090d16;
+
+  --accent-cyan: #38bdf8;
+  --accent-violet: #818cf8;
+  --accent-blue: #3b82f6;
+  --accent-emerald: #10b981;
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  --accent-glow: rgba(56, 189, 248, 0.22);
+  --title-gradient: linear-gradient(135deg, #ffffff 10%, #cbd5e1 55%, #38bdf8 100%);
+
+  --nav-bg: rgba(9, 13, 22, 0.78);
+  --nav-border: rgba(255, 255, 255, 0.09);
+
+  --modal-overlay: rgba(3, 7, 18, 0.82);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --card-shadow-hover: 0 16px 36px -4px rgba(0, 0, 0, 0.45), 0 0 24px rgba(56, 189, 248, 0.12);
 }
 
 /* ==========================================================================
@@ -439,18 +439,18 @@ header.scrolled .nav-wrapper {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  transform: translateX(26px); /* Default Dark Mode */
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease, border-color 0.3s ease;
-}
-
-[data-theme="light"] .theme-toggle-thumb {
-  transform: translateX(0px); /* Light Mode */
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.16);
+  transform: translateX(0px); /* Default Light Mode */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-thumb {
+  transform: translateX(26px); /* Dark Mode */
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .theme-toggle-icon {
@@ -469,19 +469,19 @@ header.scrolled .nav-wrapper {
   height: 14px;
 }
 
-/* Dark Mode Icon States */
-.icon-moon {
-  color: var(--accent-cyan);
-}
+/* Default (Light Mode) Icon States */
 .icon-sun {
+  color: #f59e0b;
+}
+.icon-moon {
   color: var(--text-tertiary);
 }
 
-/* Light Mode Icon States */
-[data-theme="light"] .icon-sun {
-  color: #f59e0b;
+/* Dark Mode Icon States */
+[data-theme="dark"] .icon-moon {
+  color: var(--accent-cyan);
 }
-[data-theme="light"] .icon-moon {
+[data-theme="dark"] .icon-sun {
   color: var(--text-tertiary);
 }
 
