@@ -18,7 +18,7 @@
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/168587583?v=4">
   
   <!-- Styling -->
-  <link rel="stylesheet" href="style.css?v=2.0">
+  <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body>
 
@@ -56,16 +56,24 @@
           </div>
 
           <!-- Light/Dark Mode Switcher -->
-          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
-            <!-- Sun Icon (shown in light mode) -->
-            <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <!-- Moon Icon (shown in dark mode) -->
-            <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-          </button>
+          <div class="theme-switch-wrapper">
+            <button id="theme-toggle-btn" class="theme-toggle-btn" role="switch" aria-checked="false" aria-label="Toggle theme" title="Toggle Light / Dark Mode">
+              <span class="theme-toggle-track">
+                <span class="theme-toggle-thumb"></span>
+                <span class="theme-toggle-icon icon-sun" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                  </svg>
+                </span>
+                <span class="theme-toggle-icon icon-moon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </div>
 
           <!-- Mobile Hamburger Toggle -->
           <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">☰</button>
@@ -415,6 +423,6 @@
   </button>
 
   <!-- Javascript Modules -->
-  <script type="module" src="js/main.js?v=2.0"></script>
+  <script type="module" src="js/main.js?v=3.0"></script>
 </body>
 </html>

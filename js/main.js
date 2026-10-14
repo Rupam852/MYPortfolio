@@ -46,6 +46,11 @@ function initTheme() {
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
+  const toggleBtn = document.getElementById('theme-toggle-btn');
+  if (toggleBtn) {
+    toggleBtn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+    toggleBtn.setAttribute('title', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+  }
   updateGitHubWidgets(theme);
 }
 
@@ -55,17 +60,17 @@ function updateGitHubWidgets(theme) {
 
   if (theme === 'light') {
     if (graphImg) {
-      graphImg.src = 'https://ghchart.rshah.org/0284c7/Rupam852';
+      graphImg.src = 'https://ghchart.rshah.org/4f46e5/Rupam852';
     }
     if (streakImg) {
-      streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=light&hide_border=true&background=FFFFFF&stroke=7C3AED&ring=0284C7&fire=0284C7&currStreakLabel=0F172A&sideLabels=475569&dates=7C3AED&currStreakNum=0284C7&sideNums=0F172A';
+      streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=light&hide_border=true&background=FFFFFF&stroke=4F46E5&ring=0284C7&fire=4F46E5&currStreakLabel=0F172A&sideLabels=475569&dates=4F46E5&currStreakNum=0284C7&sideNums=0F172A';
     }
   } else {
     if (graphImg) {
-      graphImg.src = 'https://ghchart.rshah.org/06b6d4/Rupam852';
+      graphImg.src = 'https://ghchart.rshah.org/38bdf8/Rupam852';
     }
     if (streakImg) {
-      streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=0F172A&stroke=8B5CF6&ring=06B6D4&fire=06B6D4&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=8B5CF6&currStreakNum=06B6D4&sideNums=F8FAFC';
+      streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=090D16&stroke=818CF8&ring=38BDF8&fire=38BDF8&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=818CF8&currStreakNum=38BDF8&sideNums=F8FAFC';
     }
   }
 }
