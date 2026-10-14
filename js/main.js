@@ -25,54 +25,104 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   THEME SWITCHER ENGINE (DEFAULT: LIGHT MODE)
+   THEME SWITCHER ENGINE (DEFAULT: LIGHT MODE WITH SILK-SMOOTH TRANSITIONS)
    ========================================================================== */
+let themeTransitionTimer = null;
+
 function initTheme() {
   const toggleBtn = document.getElementById('theme-toggle-btn');
   const storedTheme = localStorage.getItem('rupam_theme') || 'light';
 
-  // Apply stored or default theme
-  applyTheme(storedTheme);
+  // Apply stored or default theme instantly without transition on initial load
+  applyTheme(storedTheme, false);
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      applyTheme(newTheme);
+      applyTheme(newTheme, true);
       localStorage.setItem('rupam_theme', newTheme);
     });
   }
 }
 
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+function applyTheme(theme, animate = true) {
   const toggleBtn = document.getElementById('theme-toggle-btn');
-  if (toggleBtn) {
-    toggleBtn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
-    toggleBtn.setAttribute('title', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+
+  const updateDOM = () => {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (toggleBtn) {
+      toggleBtn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+      toggleBtn.setAttribute('title', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+    }
+    updateGitHubWidgets(theme);
+  };
+
+  if (!animate) {
+    updateDOM();
+    return;
   }
-  updateGitHubWidgets(theme);
+
+  // Activate global transition class for smooth interpolation of all elements
+  document.documentElement.classList.add('theme-transitioning');
+
+  // Use native View Transition API for cinema-grade crossfade if supported
+  if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    try {
+      const transition = document.startViewTransition(() => {
+        updateDOM();
+      });
+      transition.finished.finally(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+      });
+      return;
+    } catch {
+      // Fallback to CSS transitions below
+    }
+  }
+
+  // Standard CSS transition handler
+  updateDOM();
+  if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
+  themeTransitionTimer = setTimeout(() => {
+    document.documentElement.classList.remove('theme-transitioning');
+  }, 450);
 }
 
 function updateGitHubWidgets(theme) {
   const graphImg = document.getElementById('github-graph-img');
   const streakImg = document.getElementById('github-streak-img');
 
-  if (theme === 'light') {
-    if (graphImg) {
-      graphImg.src = 'https://ghchart.rshah.org/4f46e5/Rupam852';
-    }
-    if (streakImg) {
-      streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=light&hide_border=true&background=FFFFFF&stroke=4F46E5&ring=0284C7&fire=4F46E5&currStreakLabel=0F172A&sideLabels=475569&dates=4F46E5&currStreakNum=0284C7&sideNums=0F172A';
-    }
-  } else {
-    if (graphImg) {
-      graphImg.src = 'https://ghchart.rshah.org/38bdf8/Rupam852';
-    }
-    if (streakImg) {
-      streakImg.src = 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=090D16&stroke=818CF8&ring=38BDF8&fire=38BDF8&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=818CF8&currStreakNum=38BDF8&sideNums=F8FAFC';
-    }
-  }
+  const newGraphSrc = theme === 'light'
+    ? 'https://ghchart.rshah.org/4f46e5/Rupam852'
+    : 'https://ghchart.rshah.org/38bdf8/Rupam852';
+
+  const newStreakSrc = theme === 'light'
+    ? 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=light&hide_border=true&background=FFFFFF&stroke=4F46E5&ring=0284C7&fire=4F46E5&currStreakLabel=0F172A&sideLabels=475569&dates=4F46E5&currStreakNum=0284C7&sideNums=0F172A'
+    : 'https://github-readme-streak-stats.herokuapp.com/?user=Rupam852&theme=midnight-purple&hide_border=true&background=090D16&stroke=818CF8&ring=38BDF8&fire=38BDF8&currStreakLabel=F8FAFC&sideLabels=94A3B8&dates=818CF8&currStreakNum=38BDF8&sideNums=F8FAFC';
+
+  // Smooth cross-fade external telemetry images without flash
+  [
+    { el: graphImg, src: newGraphSrc },
+    { el: streakImg, src: newStreakSrc }
+  ].forEach(({ el, src }) => {
+    if (!el) return;
+    if (el.getAttribute('src') === src) return;
+
+    el.style.transition = 'opacity 0.25s ease';
+    el.style.opacity = '0.35';
+
+    const preloader = new Image();
+    preloader.onload = () => {
+      el.src = src;
+      el.style.opacity = '1';
+    };
+    preloader.onerror = () => {
+      el.src = src;
+      el.style.opacity = '1';
+    };
+    preloader.src = src;
+  });
 }
 
 /* ==========================================================================
